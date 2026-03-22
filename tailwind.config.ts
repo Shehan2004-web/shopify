@@ -5,14 +5,18 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+<<<<<<< HEAD
     "./src/domains/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/shared/**/*.{js,ts,jsx,tsx,mdx}",
+=======
+>>>>>>> 5511633 (Initial commit from Create Next App)
   ],
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+<<<<<<< HEAD
         brand: {
           primary: "#5057f5",
           "primary-light": "#e8e9fe",
@@ -79,6 +83,8 @@ const config: Config = {
           "countReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both",
         float: "float 4s ease-in-out infinite",
         "bar-grow": "barGrow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both",
+=======
+>>>>>>> 5511633 (Initial commit from Create Next App)
       },
     },
   },

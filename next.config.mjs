@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -14,8 +13,5 @@ const nextConfig = {
     ],
   },
 };
-=======
-const nextConfig = {};
->>>>>>> 5511633 (Initial commit from Create Next App)
 
 export default nextConfig;

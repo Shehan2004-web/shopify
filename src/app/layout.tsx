@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 
 import { QueryProvider } from "@/shared/providers/QueryProvider";
 import "./globals.css";
@@ -20,20 +19,6 @@ const serif = Instrument_Serif({
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-=======
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
->>>>>>> 5511633 (Initial commit from Create Next App)
 });
 
 export const metadata: Metadata = {
@@ -49,17 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-<<<<<<< HEAD
         className={`${inter.variable} ${serif.variable} ${mono.variable} font-sans antialiased`}
       >
         <QueryProvider>
           {children}
         </QueryProvider>
-=======
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
->>>>>>> 5511633 (Initial commit from Create Next App)
       </body>
     </html>
   );

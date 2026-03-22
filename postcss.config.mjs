@@ -2,10 +2,7 @@
 const config = {
   plugins: {
     tailwindcss: {},
-<<<<<<< HEAD
     autoprefixer: {},
-=======
->>>>>>> 5511633 (Initial commit from Create Next App)
   },
 };
 

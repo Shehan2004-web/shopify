@@ -1,8 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { X, Search, ChevronDown, Package, Plus, Banknote, CreditCard, Box, User, AlertCircle } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
+import { X, Search, ChevronDown, Banknote, AlertCircle } from 'lucide-react';
 
 interface Props {
   isOpen: boolean;

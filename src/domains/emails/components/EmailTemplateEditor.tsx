@@ -7,12 +7,11 @@ import { Button } from '@/shared/ui/atoms/Button';
 import { EmailTrigger } from '../types';
 import { cn } from '@/shared/lib/utils';
 import { 
-  Save, Sparkles, Mail, 
-  Bold, Italic, Underline, Strikethrough, 
+  Save, Sparkles, 
+  Bold, Italic, Underline, 
   List, ListOrdered, Link2, Image as ImageIcon, 
-  ChevronDown, MoreHorizontal,
   LucideIcon, Heading1, Heading2, Table as TableIcon,
-  Eye, MonitorIcon, X, Globe
+  Eye, X
 } from 'lucide-react';
 
 interface EmailTemplateEditorProps {

@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { X, ArrowLeft, Mail, MapPin, Clock, ShoppingCart, Activity, ShieldAlert, CreditCard, ChevronRight, CheckCircle } from 'lucide-react';
+import { X, ArrowLeft, Mail, MapPin, ShoppingCart, Activity, ShieldAlert, CreditCard, ChevronRight, CheckCircle } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
-  customer: any | null; // using any to bypass strict type bindings quickly for UI build
+  customer: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
   onClose: () => void;
 }
 
@@ -253,7 +253,7 @@ export const CustomerProfileModal = ({ customer, onClose }: Props) => {
                     <button className="text-amber-700 font-normal text-[12px] hover:underline cursor-pointer">Edit</button>
                  </h2>
                  <p className="text-[12px] text-amber-800 leading-relaxed italic">
-                    "Customer previously had issues with sizing. Ensure 30-day return policy is highlighted in further comms."
+                    &quot;Customer previously had issues with sizing. Ensure 30-day return policy is highlighted in further comms.&quot;
                  </p>
               </section>
 

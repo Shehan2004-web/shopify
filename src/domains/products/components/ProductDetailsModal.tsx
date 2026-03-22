@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import type { Product } from '@/domains/products/types';
-import { X, ArrowLeft, Bold, Italic, Underline, AlignLeft, Link2, Image as ImageIcon, PlayCircle, Box, GripHorizontal, Code, ChevronDown, Check } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
+import { Bold, Italic, Underline, AlignLeft, Link2, Image as ImageIcon, PlayCircle, Code, ChevronDown } from 'lucide-react';
 import { useUpdateProduct } from '@/domains/products/hooks/useProductQueries';
 
 interface Props {

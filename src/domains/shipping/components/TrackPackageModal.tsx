@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { X, ArrowLeft, Truck, CheckCircle, Package, MapPin, Clock } from 'lucide-react';
+import { ArrowLeft, Truck, CheckCircle, Package, MapPin, Clock } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
-  shipment: any | null; // using any to bypass strict type bindings quickly for UI build
+  shipment: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
   onClose: () => void;
 }
 

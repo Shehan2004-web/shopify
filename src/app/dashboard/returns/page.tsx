@@ -30,7 +30,6 @@ import {
   CheckCircle,
   XCircle,
   Eye,
-  X,
 } from 'lucide-react';
 import { CreateReturnModal, ReviewReturnModal } from '@/domains/returns/components';
 
@@ -95,7 +94,7 @@ export default function ReturnsManagementPage() {
   const [sortDir, setSortDir] = React.useState<SortDir>('desc');
   const [actionOpen, setActionOpen] = React.useState<string | null>(null);
   const [createModalOpen, setCreateModalOpen] = React.useState(false);
-  const [selectedReturnClaim, setSelectedReturnClaim] = React.useState<any | null>(null);
+  const [selectedReturnClaim, setSelectedReturnClaim] = React.useState<any | null>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const toggleSort = (field: 'date' | 'amount') => {
     if (sortField === field) setSortDir(sortDir === 'asc' ? 'desc' : 'asc');

@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { X, Search, Package, ArrowRight, Printer, CheckCircle, Clock, Truck, CircleDot, AlertCircle, ShoppingCart, DollarSign, Mail, MapPin } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
+import { X, Search, CircleDot, AlertCircle, ShoppingCart } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
@@ -70,7 +70,7 @@ export const CreateOrderModal = ({ isOpen, onClose }: Props) => {
                      <div className="p-3 flex items-center justify-between hover:bg-neutral-50">
                         <div className="flex items-center gap-3">
                            <div className="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center p-1 border border-neutral-200">
-                             <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="Product" className="object-cover rounded-sm mix-blend-multiply" />
+                             <Image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="Product" width={40} height={40} className="object-cover rounded-sm mix-blend-multiply" />
                            </div>
                            <div>
                              <p className="text-[13px] font-bold text-neutral-900 border-b border-transparent hover:border-neutral-900 cursor-pointer inline-block leading-tight">Nike Air Max 270</p>
@@ -91,7 +91,7 @@ export const CreateOrderModal = ({ isOpen, onClose }: Props) => {
                      <div className="p-3 flex items-center justify-between hover:bg-neutral-50">
                         <div className="flex items-center gap-3">
                            <div className="w-10 h-10 rounded bg-neutral-100 flex items-center justify-center p-1 border border-neutral-200">
-                             <img src="https://images.unsplash.com/photo-1572635196237-14b3f281501f?w=100&q=80" alt="Product" className="object-cover rounded-sm mix-blend-multiply" />
+                             <Image src="https://images.unsplash.com/photo-1572635196237-14b3f281501f?w=100&q=80" alt="Product" width={40} height={40} className="object-cover rounded-sm mix-blend-multiply" />
                            </div>
                            <div>
                              <p className="text-[13px] font-bold text-neutral-900 border-b border-transparent hover:border-neutral-900 cursor-pointer inline-block leading-tight">Essential Crewneck</p>

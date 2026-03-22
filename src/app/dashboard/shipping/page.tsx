@@ -100,7 +100,7 @@ const ShipmentsTable = () => {
   const [statusFilter, setStatusFilter] = React.useState<ShipmentStatus | null>(null);
   const [sortField, setSortField] = React.useState<SortField>(null);
   const [sortDir, setSortDir] = React.useState<SortDir>('desc');
-  const [selectedTrackingShipment, setSelectedTrackingShipment] = React.useState<any | null>(null);
+  const [selectedTrackingShipment, setSelectedTrackingShipment] = React.useState<any | null>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const toggleSort = (field: SortField) => {
     if (sortField === field) { setSortDir(sortDir === 'asc' ? 'desc' : 'asc'); }

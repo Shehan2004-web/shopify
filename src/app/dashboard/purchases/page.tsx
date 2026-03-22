@@ -98,7 +98,7 @@ const OrdersTable = () => {
   const [sortField, setSortField] = React.useState<SortField>(null);
   const [sortDir, setSortDir] = React.useState<SortDir>('desc');
   const [actionOpen, setActionOpen] = React.useState<string | null>(null);
-  const [selectedOrder, setSelectedOrder] = React.useState<any | null>(null);
+  const [selectedOrder, setSelectedOrder] = React.useState<any | null>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const toggleSort = (field: SortField) => {
     if (sortField === field) { setSortDir(sortDir === 'asc' ? 'desc' : 'asc'); }

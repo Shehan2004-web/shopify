@@ -1,9 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { X, UserPlus, Globe, Check, AlertCircle, Search } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
-import { Button } from '@/shared/ui/atoms/Button';
+import { Search } from 'lucide-react';
+import Image from 'next/image';
 
 interface Props {
   isOpen: boolean;
@@ -21,8 +20,8 @@ export const AddCustomerModal = ({ isOpen, onClose }: Props) => {
         {/* ── Theme Compatible Header ─────────────────────── */}
         <header className="flex h-16 items-center justify-between bg-white px-6 border-b border-neutral-200 flex-shrink-0 z-20">
           <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
-              <UserPlus className="h-5 w-5" />
+            <div className="h-10 w-10 rounded-full bg-neutral-100 flex items-center justify-center border border-neutral-200 shadow-sm relative overflow-hidden">
+              <Image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="Customer Profile" fill className="object-cover opacity-80" />
             </div>
             <div>
               <h2 className="text-[18px] font-bold text-neutral-900 tracking-tight leading-none">Add Customer</h2>
@@ -185,7 +184,7 @@ export const AddCustomerModal = ({ isOpen, onClose }: Props) => {
                        <input type="checkbox" className="w-4 h-4 mt-0.5 rounded border-[#c9cccf] text-[#005bd3] focus:ring-[#005bd3]" />
                        <div>
                          <span className="text-[13px] text-neutral-800 font-medium">Collect tax</span>
-                         <p className="text-[12px] text-neutral-500 mt-1">If unchecked, taxes will not be charged to this customer's orders.</p>
+                          <p className="text-[12px] text-neutral-500 mt-1">If unchecked, taxes will not be charged to this customer&apos;s orders.</p>
                        </div>
                     </label>
                  </div>

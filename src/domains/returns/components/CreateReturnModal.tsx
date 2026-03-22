@@ -1,9 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { X, Search, ChevronDown, Package, Plus, Check, Gift, AlertCircle, RefreshCw } from 'lucide-react';
+import { X, Search, ChevronDown, Check, Gift, RefreshCw } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
-import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
   isOpen: boolean;

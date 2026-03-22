@@ -2,8 +2,7 @@
 
 import * as React from 'react';
 import { useAddProduct } from '@/domains/products/hooks/useProductQueries';
-import { X, ArrowLeft, Bold, Italic, Underline, AlignLeft, Link2, Image as ImageIcon, PlayCircle, Box, GripHorizontal, Code, ChevronDown, Check } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
+import { Bold, Italic, Underline, AlignLeft, Link2, Image as ImageIcon, PlayCircle, Box, Code, ChevronDown } from 'lucide-react';
 
 interface Props {
   isOpen: boolean;
@@ -202,7 +201,7 @@ export const AddProductModal = ({ isOpen, onClose }: Props) => {
                    <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[13px] text-neutral-500">Rs</div>
                    <input type="number" placeholder="0.00" className="w-full h-9 pl-8 pr-3 rounded-lg border border-[#c9cccf] text-[14px] focus:border-[#005bd3] focus:ring-1 focus:ring-[#005bd3] focus:outline-none transition-shadow" />
                  </div>
-                 <span className="text-[12px] text-neutral-500 mt-0.5">Customers won't see this</span>
+                 <span className="text-[12px] text-neutral-500 mt-0.5">Customers won&apos;t see this</span>
                </div>
                <div className="flex flex-col gap-1">
                  <label className="text-[13px] font-medium text-[#202223]">Profit</label>

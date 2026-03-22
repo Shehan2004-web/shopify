@@ -2,13 +2,12 @@
 
 import * as React from 'react';
 import { X, Send, Mail, CheckCircle2 } from 'lucide-react';
-import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
-  triggers: any[];
+  triggers: any[]; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 export const SendTestEmailModal = ({ isOpen, onClose, triggers }: Props) => {

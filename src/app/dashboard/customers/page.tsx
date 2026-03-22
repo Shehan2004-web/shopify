@@ -77,7 +77,7 @@ export default function CustomersPage() {
   const [segmentFilter, setSegmentFilter] = React.useState<CustomerSegment | null>(null);
   const [actionOpen, setActionOpen] = React.useState<string | null>(null);
   const [isAddModalOpen, setIsAddModalOpen] = React.useState(false);
-  const [selectedCustomer, setSelectedCustomer] = React.useState<any | null>(null);
+  const [selectedCustomer, setSelectedCustomer] = React.useState<any | null>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const filtered = React.useMemo(() => {
     if (!customers) return [];

@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { X, ArrowLeft, Mail, Shield, ShieldCheck, Clock, Key, Trash2, Lock, History, MapPin, Activity } from 'lucide-react';
+import { X, ArrowLeft, Mail, ShieldCheck, Clock, Key, Trash2, Lock, History, MapPin, Activity } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
-  user: any | null;
+  user: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
   onClose: () => void;
 }
 

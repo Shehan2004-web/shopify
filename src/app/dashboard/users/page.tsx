@@ -46,7 +46,7 @@ export default function UsersPage() {
   const [statusFilter, setStatusFilter] = React.useState<UserStatus | null>(null);
   const [actionOpen, setActionOpen] = React.useState<string | null>(null);
   const [isInviteModalOpen, setIsInviteModalOpen] = React.useState(false);
-  const [selectedUser, setSelectedUser] = React.useState<any | null>(null);
+  const [selectedUser, setSelectedUser] = React.useState<any | null>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const filtered = React.useMemo(() => {
     if (!users) return [];

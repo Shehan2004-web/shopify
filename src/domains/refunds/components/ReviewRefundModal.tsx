@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { X, Clock, CheckCircle, Package, AlertCircle, ArrowLeft, RefreshCcw, Tag, Key, Check } from 'lucide-react';
+import { Clock, Tag, Check, ArrowLeft } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
@@ -103,7 +103,7 @@ export const ReviewRefundModal = ({ claim, onClose }: Props) => {
                     <div className="mt-3 bg-red-50/50 border border-red-100 rounded-lg p-3">
                        <p className="text-[12px] font-semibold text-red-800 flex items-center gap-1.5"><Tag className="h-3.5 w-3.5" /> Return Reason</p>
                        <p className="text-[13px] text-red-900 mt-1">{claim.reason}</p>
-                       <p className="text-[12px] text-red-700/80 mt-1.5 italic">"The item was slightly damaged on arrival, specifically the zipper." - Customer</p>
+                       <p className="text-[12px] text-red-700/80 mt-1.5 italic">&quot;The item was slightly damaged on arrival, specifically the zipper.&quot; - Customer</p>
                     </div>
                   </div>
                 </div>

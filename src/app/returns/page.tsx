@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Typography } from '@/shared/ui/atoms/Typography';
 import { Button } from '@/shared/ui/atoms/Button';
+import Image from 'next/image';
 import { cn } from '@/shared/lib/utils';
 
 /* ── Types & Constants ────────────────────────────── */
@@ -268,8 +269,8 @@ export default function ReturnPortalPage() {
                             isSelected ? 'border-brand-teal shadow-xl shadow-brand-teal/5 ring-1 ring-brand-teal/50' : 'border-neutral-200 hover:border-neutral-300'
                           )}
                         >
-                          <div className="h-24 w-24 rounded-2xl overflow-hidden bg-neutral-100 flex-shrink-0">
-                            <img src={product.image} alt={product.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <div className="h-24 w-24 rounded-2xl overflow-hidden bg-neutral-100 flex-shrink-0 relative">
+                            <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between mb-1">
@@ -388,8 +389,8 @@ export default function ReturnPortalPage() {
                 return (
                   <div key={id} className="bg-white rounded-3xl border border-neutral-200 p-8 animate-fade-slide-up">
                     <div className="flex items-center gap-4 mb-8">
-                      <div className="h-14 w-14 rounded-2xl overflow-hidden bg-neutral-100">
-                        <img src={product?.image} className="h-full w-full object-cover" />
+                      <div className="h-14 w-14 rounded-2xl overflow-hidden bg-neutral-100 relative">
+                        <Image src={product?.image || ''} alt={product?.name || 'Product'} fill className="object-cover" />
                       </div>
                       <div>
                         <Typography variant="small" className="text-[14px] font-bold text-neutral-900">{product?.name}</Typography>

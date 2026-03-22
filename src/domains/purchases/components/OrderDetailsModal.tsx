@@ -1,12 +1,13 @@
 'use client';
 
 import * as React from 'react';
-import { X, ArrowLeft, CheckCircle, Clock, Truck, CircleDot, Mail, MapPin, Download, ExternalLink, ShieldCheck, DollarSign, ShoppingCart } from 'lucide-react';
+import { X, ArrowLeft, CheckCircle, Clock, Truck, CircleDot, Mail, MapPin, DollarSign, ShoppingCart, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
-  order: any | null; // using any to bypass strict type bindings quickly for UI build
+  order: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
   onClose: () => void;
 }
 
@@ -14,7 +15,6 @@ export const OrderDetailsModal = ({ order, onClose }: Props) => {
   if (!order) return null;
 
   const isPaid = order.paymentStatus === 'paid';
-  const isFulfilled = order.fulfillmentStatus === 'delivered' || order.fulfillmentStatus === 'dispatched';
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
@@ -74,7 +74,7 @@ export const OrderDetailsModal = ({ order, onClose }: Props) => {
                   <div className="flex items-center gap-2 text-[#202223]">
                      {order.fulfillmentStatus === 'unfulfilled' ? <CircleDot className="h-5 w-5 text-amber-500" /> : <CheckCircle className="h-5 w-5 text-emerald-500" />}
                      <h2 className="text-[14px] font-semibold">{order.fulfillmentStatus === 'unfulfilled' ? 'Unfulfilled' : 'Fulfilled'}</h2>
-                     <span className="text-[13px] text-neutral-500 ml-1">({order.items.reduce((s: number, i: any) => s + i.quantity, 0)})</span>
+                      <span className="text-[13px] text-neutral-500 ml-1">({order.items.reduce((s: number, i: any) => s + i.quantity, 0)})</span> {/* eslint-disable-line @typescript-eslint/no-explicit-any */}
                   </div>
                   {order.fulfillmentStatus === 'unfulfilled' && (
                      <Button size="sm" className="h-8 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-[13px]">Fulfill items</Button>
@@ -82,11 +82,13 @@ export const OrderDetailsModal = ({ order, onClose }: Props) => {
                 </div>
                 
                 <div className="p-4 flex flex-col gap-0 divide-y divide-[#e1e3e5]">
-                  {order.items.map((item: any, idx: number) => (
+                  {order.items.map((item: any, idx: number) => ( // eslint-disable-line @typescript-eslint/no-explicit-any
                      <div key={idx} className="py-3 flex items-center gap-4 first:pt-0 last:pb-0">
                         <div className="w-12 h-12 rounded bg-neutral-100 flex items-center justify-center p-1 border border-neutral-200 shadow-sm relative">
-                          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="Product" className="object-cover rounded-sm mix-blend-multiply opacity-80" />
-                          <span className="absolute -top-2 -right-2 bg-neutral-500 text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm">{item.quantity}</span>
+                        <div className="w-12 h-12 rounded bg-neutral-100 flex items-center justify-center p-1 border border-neutral-200 shadow-sm relative">
+                          <Image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&q=80" alt="Product" fill className="object-cover rounded-sm mix-blend-multiply opacity-80 p-1" />
+                          <span className="absolute -top-2 -right-2 bg-neutral-500 text-white text-[10px] font-bold h-5 w-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm z-10">{item.quantity}</span>
+                        </div>
                         </div>
                         <div className="flex-1">
                           <p className="text-[13px] font-bold text-brand-primary hover:underline cursor-pointer inline-block leading-tight">{item.name}</p>
@@ -255,7 +257,7 @@ export const OrderDetailsModal = ({ order, onClose }: Props) => {
                     <ShieldCheck className="h-6 w-6 text-emerald-600 self-start mt-0.5" />
                     <div>
                        <h2 className="text-[13px] font-bold text-emerald-900">Low risk of fraud</h2>
-                       <p className="text-[12px] text-emerald-700 mt-1">Shopify's machine learning models classify this transaction as safe.</p>
+                       <p className="text-[12px] text-emerald-700 mt-1">Shopify&apos;s machine learning models classify this transaction as safe.</p>
                        <button className="text-[12px] text-emerald-800 font-bold hover:underline mt-2">View analysis</button>
                     </div>
                  </div>

@@ -1,12 +1,12 @@
 'use client';
 
 import * as React from 'react';
-import { X, Clock, CheckCircle, Package, AlertCircle, ArrowLeft, RefreshCw, Truck, Gift, Repeat, Info } from 'lucide-react';
+import { CheckCircle, ArrowLeft, Truck, Gift, Repeat, Info, AlertCircle } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
-  claim: any | null; // using any to easily accept the useRefundClaims object shape
+  claim: any | null; // eslint-disable-line @typescript-eslint/no-explicit-any
   onClose: () => void;
 }
 
@@ -82,7 +82,7 @@ export const ReviewReturnModal = ({ claim, onClose }: Props) => {
                   <span className="text-[13px] font-medium text-neutral-600">Original order: <a href="#" className="text-brand-primary hover:underline font-bold">#ORD-{(claim.id.replace(/\D/g,'') || '102') + '09'}</a></span>
                 </div>
                 
-                {claim.items.map((item: any, i: number) => (
+                {claim.items.map((item: any, i: number) => ( // eslint-disable-line @typescript-eslint/no-explicit-any
                   <div key={i} className="p-4 flex items-start gap-4 border-b border-neutral-50">
                     <div className="h-16 w-16 rounded-lg bg-neutral-100 flex flex-col items-center justify-center border border-neutral-200 flex-shrink-0 shadow-sm">
                        <span className="text-3xl relative z-10">📦</span>

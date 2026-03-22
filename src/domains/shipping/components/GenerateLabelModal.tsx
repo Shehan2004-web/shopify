@@ -1,9 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import { X, Search, Package, ArrowRight, Printer, AlertTriangle, BadgeDollarSign, Truck } from 'lucide-react';
+import { Search, ArrowRight, Printer, AlertTriangle } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
-import { Button } from '@/shared/ui/atoms/Button';
 
 interface Props {
   isOpen: boolean;
